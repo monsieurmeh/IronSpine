@@ -1,4 +1,5 @@
 ﻿using FeatSettings;
+using Il2Cpp;
 using MelonLoader;
 
 
@@ -22,8 +23,10 @@ namespace IronSpine
 
         #endregion
 
+        private const double Threshold = 10000.0;
         private MelonLogger.Instance? mLogger;
         private IronSpineFeat mFeat = new IronSpineFeat();
+        private double mKilogramKilometers = 0.0;
 
         public IronSpineFeat Feat { get { return mFeat; } }
 
@@ -39,6 +42,19 @@ namespace IronSpine
         public void Log(string msg)
         {
             mLogger?.Msg(msg);
+        }
+
+        public void OnDistanceTravelled(float meters)
+        {
+            Encumber encumber = GameManager.GetEncumberComponent();
+            if (encumber == null) return;
+            mKilogramKilometers += meters * 0.001 * encumber.GetGearWeightKG().ToQuantity(1.0f);
+            UpdateProgress();
+        }
+
+        public void UpdateProgress()
+        {
+            mFeat.Progress = (float)(mKilogramKilometers / Threshold);
         }
     }
 }

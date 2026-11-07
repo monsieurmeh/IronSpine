@@ -1,5 +1,6 @@
 ﻿using FeatSettings;
 using Il2Cpp;
+using Il2CppTLD.Stats;
 
 
 namespace IronSpine
@@ -13,5 +14,11 @@ namespace IronSpine
         public override string ShortDescription { get { return "Carry 10,000 kg·km"; } }
         public override string BonusDescription { get { return "+3 kg carry capacity"; } }
         public override FeatType BadgeFeat { get { return FeatType.SnowWalker; } }
+
+        public override void OnStatIncremented(StatID statID, float increment)
+        {
+            if (statID != StatID.DistanceTravelled) return;
+            IronSpineManager.Instance.OnDistanceTravelled(increment);
+        }
     }
 }
