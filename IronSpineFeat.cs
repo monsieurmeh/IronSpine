@@ -12,7 +12,6 @@ namespace IronSpine
         private const string KilogramKilometersKey = "KilogramKilometers";
         private IronSpineSettings mSettings = new IronSpineSettings();
         private Texture2D? mUnlockedBadge;
-        private Texture2D? mLockedBadge;
 
         public IronSpineSettings IronSpineSettings { get { return mSettings; } }
 
@@ -24,7 +23,6 @@ namespace IronSpine
         public override string BonusDescription { get { return "IRONSPINE_FEAT_BONUS_DESCRIPTION"; } }
         public override FeatType BadgeFeat { get { return FeatType.SnowWalker; } }
         public override Texture2D? UnlockedBadgeTexture { get { return mUnlockedBadge ??= LoadBadge("IronSpine_Unlocked.png"); } }
-        public override Texture2D? LockedBadgeTexture { get { return mLockedBadge ??= LoadBadge("IronSpine_Locked.png"); } }
         public override CustomFeatSettings? Settings { get { return mSettings; } }
 
         public override void OnStatIncremented(StatID statID, float increment)
