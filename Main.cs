@@ -7,7 +7,7 @@ namespace IronSpine
     {
         public override void OnInitializeMelon()
         {
-            LoggerInstance.Msg("Initialized Successfully!");
+            IronSpineManager.Instance.Initialize(LoggerInstance);
         }
     }
 }
