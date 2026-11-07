@@ -59,7 +59,7 @@ namespace IronSpine
 
         public void UpdateProgress()
         {
-            mFeat.Progress = (float)(mKilogramKilometers / Math.Max(mFeat.IronSpineSettings.Threshold, 1));
+            mFeat.Progress = Math.Max(mFeat.Progress, (float)(mKilogramKilometers / Math.Max(mFeat.IronSpineSettings.Threshold, 1)));
         }
 
         public void AddCarryCapacity(ref ItemWeight carryCapacityBuff)
