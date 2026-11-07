@@ -43,5 +43,11 @@ namespace IronSpine
             string? value = Load(KilogramKilometersKey);
             IronSpineManager.Instance.KilogramKilometers = double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out double kgkm) ? kgkm : 0.0;
         }
+
+        public override string FormatText(string text)
+        {
+            return text.Replace("{kgkm}", mSettings.Threshold.ToString("N0", CultureInfo.InvariantCulture))
+                       .Replace("{bonus}", mSettings.BonusKg.ToString(CultureInfo.InvariantCulture));
+        }
     }
 }
