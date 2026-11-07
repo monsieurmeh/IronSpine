@@ -1,5 +1,6 @@
 ﻿using FeatSettings;
 using Il2Cpp;
+using Il2CppTLD.IntBackedUnit;
 using MelonLoader;
 
 
@@ -24,6 +25,7 @@ namespace IronSpine
         #endregion
 
         private const double Threshold = 10000.0;
+        private const int BonusKg = 3;
         private MelonLogger.Instance? mLogger;
         private IronSpineFeat mFeat = new IronSpineFeat();
         private double mKilogramKilometers = 0.0;
@@ -56,6 +58,12 @@ namespace IronSpine
         public void UpdateProgress()
         {
             mFeat.Progress = (float)(mKilogramKilometers / Threshold);
+        }
+
+        public void AddCarryCapacity(ref ItemWeight carryCapacityBuff)
+        {
+            if (!mFeat.IsUnlockedAndEnabled) return;
+            carryCapacityBuff += ItemWeight.FromKilograms(BonusKg);
         }
     }
 }
