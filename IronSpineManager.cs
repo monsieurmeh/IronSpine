@@ -29,6 +29,7 @@ namespace IronSpine
         private double mKilogramKilometers = 0.0;
 
         public IronSpineFeat Feat { get { return mFeat; } }
+        public double KilogramKilometers { get { return mKilogramKilometers; } set { mKilogramKilometers = value; UpdateProgress(); } }
 
         public void Initialize(MelonLogger.Instance logger)
         {
