@@ -37,5 +37,7 @@
       <HintPath>$(ModsPath)\FeatSettings.dll</HintPath>
     </Reference>
     <EmbeddedResource Include="Localization.json" />
+    <EmbeddedResource Include="Badges\IronSpine_Unlocked.png" LogicalName="IronSpine.IronSpine_Unlocked.png" />
+    <EmbeddedResource Include="Badges\IronSpine_Locked.png" LogicalName="IronSpine.IronSpine_Locked.png" />
   </ItemGroup>
 </Project>
