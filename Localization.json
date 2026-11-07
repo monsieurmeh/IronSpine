@@ -1,0 +1,26 @@
+{
+  "IRONSPINE_FEAT_NAME": {
+    "English": "Iron Spine"
+  },
+  "IRONSPINE_FEAT_DESCRIPTION": {
+    "English": "Hauling heavy loads over long distances has hardened your back.\n\nUnlock by carrying a total of 10,000 kg·km: kilograms carried times kilometers walked."
+  },
+  "IRONSPINE_FEAT_SHORT_DESCRIPTION": {
+    "English": "Carry 10,000 kg·km"
+  },
+  "IRONSPINE_FEAT_BONUS_DESCRIPTION": {
+    "English": "+3 kg carry capacity"
+  },
+  "IRONSPINE_Threshold_Name": {
+    "English": "Required kg·km"
+  },
+  "IRONSPINE_Threshold_Desc": {
+    "English": "Kilograms carried times kilometers walked needed to unlock Iron Spine.\nDefault: 10,000"
+  },
+  "IRONSPINE_BonusKg_Name": {
+    "English": "Carry Capacity Bonus (kg)"
+  },
+  "IRONSPINE_BonusKg_Desc": {
+    "English": "Extra carry capacity while Iron Spine is enabled.\nDefault: 3 kg"
+  }
+}

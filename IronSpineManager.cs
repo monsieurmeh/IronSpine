@@ -34,6 +34,10 @@ namespace IronSpine
         public void Initialize(MelonLogger.Instance logger)
         {
             mLogger = logger;
+            if (!FeatSettingsManager.Instance.LoadEmbeddedLocalization(typeof(IronSpineManager).Assembly, "IronSpine.Localization.json"))
+            {
+                Log("Could not load Iron Spine localization!");
+            }
             if (!FeatSettingsManager.Instance.TryRegisterCustomFeat(mFeat))
             {
                 Log("Could not register Iron Spine with FeatSettings!");

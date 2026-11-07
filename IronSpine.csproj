@@ -36,5 +36,6 @@
     <Reference Include="FeatSettings">
       <HintPath>$(ModsPath)\FeatSettings.dll</HintPath>
     </Reference>
+    <EmbeddedResource Include="Localization.json" />
   </ItemGroup>
 </Project>

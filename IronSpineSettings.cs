@@ -8,14 +8,14 @@ namespace IronSpine
     {
         public IronSpineSettings() : base("IronSpine") { }
 
-        [Section("Iron Spine")]
-        [Name("Required kg·km")]
-        [Description("Kilograms carried times kilometers walked needed to unlock Iron Spine.\nDefault: 10,000")]
+        [Section("IRONSPINE_FEAT_NAME", Localize = true)]
+        [Name("IRONSPINE_Threshold_Name", Localize = true)]
+        [Description("IRONSPINE_Threshold_Desc")]
         [Slider(1, 100000)]
         public int Threshold = 10000;
 
-        [Name("Carry Capacity Bonus (kg)")]
-        [Description("Extra carry capacity while Iron Spine is enabled.\nDefault: 3 kg")]
+        [Name("IRONSPINE_BonusKg_Name", Localize = true)]
+        [Description("IRONSPINE_BonusKg_Desc")]
         [Slider(1, 20)]
         public int BonusKg = 3;
     }

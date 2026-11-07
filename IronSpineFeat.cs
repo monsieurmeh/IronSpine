@@ -15,10 +15,10 @@ namespace IronSpine
 
         public override FeatType FeatType { get { return (FeatType)13; } }
         public override string Name { get { return "IronSpine"; } }
-        public override string DisplayName { get { return "Iron Spine"; } }
-        public override string Description { get { return "Hauling heavy loads over long distances has hardened your back.\n\nUnlock by carrying a total of 10,000 kg·km: kilograms carried times kilometers walked."; } }
-        public override string ShortDescription { get { return "Carry 10,000 kg·km"; } }
-        public override string BonusDescription { get { return "+3 kg carry capacity"; } }
+        public override string DisplayName { get { return "IRONSPINE_FEAT_NAME"; } }
+        public override string Description { get { return "IRONSPINE_FEAT_DESCRIPTION"; } }
+        public override string ShortDescription { get { return "IRONSPINE_FEAT_SHORT_DESCRIPTION"; } }
+        public override string BonusDescription { get { return "IRONSPINE_FEAT_BONUS_DESCRIPTION"; } }
         public override FeatType BadgeFeat { get { return FeatType.SnowWalker; } }
         public override CustomFeatSettings? Settings { get { return mSettings; } }
 
